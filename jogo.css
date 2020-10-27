@@ -1,0 +1,135 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+}
+body{
+    background:  #f2dfd3;
+}
+body div#modalGameOver{
+    text-align: center;
+}
+#container{
+    background-color: #e4c0a8;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 90%;
+    height: 100%;
+    margin: 2% 5% 2% 5%;
+    box-shadow: 2px 2px 5px black;
+    /*flexbox*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+div#placar{
+    /*position: relative;*/
+    background-color: #e4c0a8;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    padding: 1%;
+}
+div#placar h1{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+div#placar input#movimentos{
+    border: 1px solid black;
+    font-size: 30px;
+    background-color: #d3a27f;
+    color: black;
+    text-align: center;
+    width: 150px;
+    margin-right: 5%;
+    box-shadow: 1px 1px 2px black;
+    position: relative;
+    left: 2%;
+}
+div#placar label{
+    font-size: 28px;
+    position: relative;
+    left: 1%;
+}
+div#opcoes{
+    text-align: center;
+}
+input#reinicio{
+    border: none;
+    background-color: #d3a27f;
+    padding: 2%;
+    font-size: 20px;
+    border-radius: 10px;
+}
+input#reinicio:hover{
+    filter: brightness(80%);
+}
+div#opcoes input#reinicio{
+    margin-left: 5%;
+}
+div#modalGameOver input{
+    margin-top: 2%;
+    background-color: coral;
+}
+div#rodape{
+    background-color: #f7c39f;
+    width: 100%;
+    height: 300px;
+    margin-top: 10%;
+}
+div.card{
+    margin: 1%;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: relative;
+    border-radius: 5px;
+    perspective: 500px;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    transition: all 1s;
+    backface-visibility: hidden;
+}
+
+.back{
+    background: url("images/cardBack.jpg");
+}
+
+.front{
+    top: -100%;
+    transform: rotateY(-180deg);
+}
+
+.front.flipped{
+    transform: rotateY(0deg);
+}
+.flipped.match{
+    box-shadow: 0px 0px 20px rgb(0, 255, 0);
+}
+.card:hover{
+    filter: saturate(300%);
+}
+.back.flipped{
+    transform: rotateY(180deg);
+}
+#modalGameOver{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#fimJogo{
+    margin-top: 10%;
+}
